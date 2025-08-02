@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">➕ Add Donor</h1>
+    <form method="POST" class="shadow p-4 bg-white rounded">
+        <div class="mb-3">
+            <label class="form-label">Name:</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Blood Group:</label>
+            <input type="text" name="blood_group" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Contact:</label>
+            <input type="text" name="contact" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-danger w-100">Add Donor</button>
+    </form>
+</div>
+{% endblock %}

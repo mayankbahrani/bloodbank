@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">🩸 Donor List</h1>
+    <table class="table table-bordered table-hover shadow">
+        <thead class="table-danger">
+            <tr>
+                <th>Name</th>
+                <th>Blood Group</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donor in donors %}
+            <tr>
+                <td>{{ donor.name }}</td>
+                <td>{{ donor.blood_group }}</td>
+                <td>{{ donor.contact }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center text-primary mb-4">✏️ Edit Emergency Request</h2>
+    <form method="POST" class="shadow p-4 bg-white rounded">
+        <div class="mb-3">
+            <label class="form-label">Patient Name:</label>
+            <input type="text" name="patient_name" class="form-control" value="{{ req.patient_name }}" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Blood Group Needed:</label>
+            <input type="text" name="blood_group" class="form-control" value="{{ req.blood_group_needed }}" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Units Required:</label>
+            <input type="number" name="units" class="form-control" value="{{ req.units }}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Contact Number:</label>
+            <input type="text" name="contact" class="form-control" value="{{ req.contact }}" required>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Update Request</button>
+    </form>
+</div>
+{% endblock %}
